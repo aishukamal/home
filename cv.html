@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Aishwarya (Aishu) Kamal — CV</title>
+<style>
+  :root {
+    --ink: #16181d;          /* near-black text */
+    --muted: #5c6470;        /* secondary text */
+    --faint: #9aa1ab;        /* dates, footer */
+    --accent: #1a56db;       /* single quiet accent */
+    --rule: #e4e7eb;         /* hairlines */
+    --paper: #ffffff;
+    --desk: #f3f4f6;         /* screen background behind the page */
+  }
+  @page { size: letter; margin: 0.5in 0.6in; }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-print-color-adjust: exact; }
+  body {
+    font: 10pt/1.42 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "kern", "liga";
+    color: var(--ink);
+    background: var(--desk);
+    padding: 40px 16px;
+  }
+  .page {
+    max-width: 7.7in; margin: 0 auto; background: var(--paper);
+    padding: 0.65in 0.7in; border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(16,24,40,.07), 0 12px 40px rgba(16,24,40,.09);
+  }
+  h1 { font-size: 21pt; font-weight: 650; letter-spacing: -0.3px; margin-bottom: 3px; }
+  .contact { color: var(--muted); font-size: 8.8pt; margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none;
+      border-bottom: 1px solid rgba(26,86,219,.3); }
+  a:hover { border-bottom-color: var(--accent); }
+  .contact a { color: var(--accent); }
+  h2 {
+    font-size: 8.2pt; font-weight: 640; text-transform: uppercase;
+    letter-spacing: 2.2px; color: var(--accent);
+    margin: 16px 0 7px; padding-top: 10px; border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 4px; margin-top: 8px; }
+  .role { display: flex; justify-content: space-between; align-items: baseline;
+          gap: 12px; margin-top: 10px; }
+  .role b { font-size: 10.4pt; font-weight: 640; letter-spacing: -0.1px; }
+  .role .dates { color: var(--faint); font-size: 8.6pt; white-space: nowrap;
+                 font-variant-numeric: tabular-nums; }
+  .org { color: var(--muted); font-size: 9.2pt; margin-bottom: 2px; }
+  ul { margin: 4px 0 0 0; padding-left: 15px; list-style: none; }
+  li { margin-bottom: 4px; padding-left: 2px; position: relative; }
+  li::before { content: "•"; position: absolute; left: -13px; top: 0.05em;
+               color: var(--faint); font-size: 8pt; }
+  .tight li { margin-bottom: 2.5px; }
+  b { font-weight: 620; }
+  @media print {
+    body { background: none; padding: 0; font-size: 9.4pt; line-height: 1.34; }
+    .page { max-width: none; margin: 0; padding: 0; box-shadow: none; border-radius: 0; }
+    a { color: var(--accent) !important; border-bottom: none; }
+    h2 { color: var(--accent) !important; margin: 10px 0 5px; padding-top: 7px; }
+    .role { margin-top: 7px; }
+    li { margin-bottom: 2.5px; }
+    h1 { font-size: 18pt; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>Aishwarya (Aishu) Kamal</h1>
+<div class="contact">
+  Staff Software Engineer, Google &nbsp;·&nbsp; Seattle, WA &nbsp;·&nbsp;
+  <a href="mailto:aishwaryakamal@gmail.com">aishwaryakamal@gmail.com</a> &nbsp;·&nbsp;
+  <a href="https://github.com/aishukamal">github.com/aishukamal</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/aishwaryakamal">linkedin.com/in/aishwaryakamal</a>
+</div>
+
+<h2>Summary</h2>
+Distributed-systems leader with a decade at Amazon and Google building planet-scale database and
+AI infrastructure, specializing in <b>distributed consensus, replication, and failover</b> — from
+Paxos modifications that took DynamoDB to five nines, to the quorum architectures behind
+Memorystore’s cross-region replication and single-shard offerings, to resilient accelerator
+multiplexing for RL. I lead the reinforcement-learning infrastructure optimization space for
+Google Kubernetes Engine and drive RL-infrastructure direction in the open ecosystem (llm-d,
+SIG-RL); previously led marquee launches for Amazon DynamoDB and Google Cloud Memorystore. Named
+inventor on two granted U.S. patents cited as prior art in subsequent Oracle, IBM, Snowflake, and
+Harvard patent prosecutions.
+
+<h2>Experience</h2>
+
+<div class="role"><b>Staff Software Engineer — RL Infrastructure Lead, Google Kubernetes Engine</b>
+  <span class="dates">Nov 2025 – present</span></div>
+<div class="org">Google</div>
+<ul>
+  <li>Leading the <b>reinforcement-learning infrastructure optimization space</b> for GKE AI
+      workloads — setting direction across accelerator utilization, autoscaling, and
+      resilience for large-scale RL post-training and LLM inference; driving RL-infrastructure
+      direction in llm-d’s <a href="https://llm-d.ai/community/sigs"><b>SIG-RL</b></a> community.</li>
+  <li>Architected the industry’s first <b>co-operative accelerator time-slicing platform</b> for
+      RL — designed to drive accelerator utilization above 95% — in
+      <a href="https://github.com/llm-d/llm-d"><b>llm-d</b></a> (CNCF sandbox; founded by Google,
+      IBM, Red Hat, NVIDIA, CoreWeave; shipped in Red Hat OpenShift AI 3.0 and on AWS) — see the
+      <a href="https://cloud.google.com/blog/products/containers-kubernetes/introducing-co-operative-time-slicing-for-rl-in-llm-d">Google
+      Cloud announcement</a> (independently covered by trade press) and the
+      <a href="https://github.com/llm-d-incubation/llm-d-rl-time-slicing">platform on GitHub</a>,
+      which I lead and maintain.</li>
+  <li>Architected llm-d’s <a href="https://llm-d.ai/docs/well-lit-paths/foundations/workload-autoscaling"><b>workload
+      autoscaling</b></a> well-lit path — scale-from-zero and HPA-based autoscaling, the
+      project’s core autoscaling story — now maintained with IBM, Red Hat, Intel, and Solo.io
+      engineers.</li>
+</ul>
+
+<div class="role"><b>Technical Lead — Google Cloud Memorystore</b>
+  <span class="dates">Aug 2021 – Nov 2025</span></div>
+<div class="org">Google</div>
+<ul>
+  <li>Led design and launch of
+      <a href="https://cloud.google.com/blog/products/databases/memorystore-for-redis-cluster-is-ga"><b>Memorystore
+      for Redis Cluster</b></a> (unveiled at Google Cloud Next ’23; GA with 99.99% SLA) — a new
+      product line for Google Cloud — adopted in production by Reddit, Character.AI, Unity Ads
+      (10M ops/sec), Statsig (7.5M peak QPS), Palo Alto Networks, and NTT DOCOMO.</li>
+  <li>Led launch of
+      <a href="https://cloud.google.com/blog/products/databases/announcing-general-availability-of-memorystore-for-valkey/"><b>Memorystore
+      for Valkey</b></a> — the
+      <a href="https://cloud.google.com/blog/products/databases/memorystore-launches-valkey-8-0-on-google-cloud">first
+      major-cloud fully managed Valkey 8.0 service</a> following the 2024 Redis license fork —
+      adopted by MLB, Snap, Mercado Libre, and Juspay (GPay/UPI payment stack for leading Indian banks).</li>
+  <li>Continued my consensus-and-replication specialization: led
+      <a href="https://cloud.google.com/blog/products/databases/memorystore-cross-region-replication-and-single-shard-clusters/"><b>cross-region
+      replication</b></a> for Redis Cluster and Valkey — cited publicly by customers (MLB;
+      Buildertrend, which named the feature as its migration driver across ~300 instances) — and
+      architected the standalone
+      <a href="https://cloud.google.com/blog/products/databases/memorystore-cross-region-replication-and-single-shard-clusters/"><b>single-shard
+      offering</b></a> (2025) on a voting-replica and auxiliary-node quorum design that closed the
+      failover-availability gap in open-source Redis/Valkey, opening a second product tier.</li>
+</ul>
+
+<div class="role"><b>Software Engineer → Senior Software Engineer (Tech Lead) — Amazon DynamoDB</b>
+  <span class="dates">Feb 2017 – Aug 2021</span></div>
+<div class="org">Amazon Web Services</div>
+<ul>
+  <li>Led the design and launch of
+      <a href="https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-transactions/"><b>Transactions</b></a>
+      (re:Invent ’18 — brought ACID to serverless NoSQL for one of the largest database services
+      on earth at 126M peak requests/sec; a shift competitors followed and the subject of the
+      <a href="https://www.usenix.org/conference/atc23/presentation/idziorek">USENIX ATC ’23 Best
+      Paper</a>), and of the
+      <a href="https://aws.amazon.com/blogs/aws/new-dynamodb-table-class-save-up-to-60-in-your-dynamodb-costs/"><b>Standard-IA
+      table class</b></a> (announced re:Invent ’21 — cut storage costs up to 60%).</li>
+  <li>Architected and patented the data model behind
+      <a href="https://aws.amazon.com/blogs/aws/new-amazon-keyspaces-for-apache-cassandra-is-now-generally-available/"><b>Amazon
+      Keyspaces</b></a>, carrying it from <a href="https://aws.amazon.com/blogs/aws/new-amazon-managed-apache-cassandra-service-mcs/">inception
+      (re:Invent ’19)</a> to GA (2020) — an entirely new AWS product line, trusted today as the
+      primary store for Monzo Bank’s core banking ledger (350 TB, 2,000+ tables) and adopted by
+      Intuit, Adobe, and GE Vernova.</li>
+  <li>Led the availability program that improved DynamoDB availability by an order of
+      magnitude, from 99.99% to 99.999% — a 10× reduction in permitted downtime — through deep
+      modifications to the Paxos-based consensus layer.</li>
+  <li>Earlier, during DynamoDB’s hyper-growth years, shipped its re:Invent-headline
+      data-protection wave as a core engineer:
+      <a href="https://aws.amazon.com/blogs/aws/new-manage-dynamodb-items-using-time-to-live-ttl/"><b>Time-to-Live</b></a>
+      (2017), petabyte-scale
+      <a href="https://aws.amazon.com/blogs/aws/new-for-amazon-dynamodb-global-tables-and-on-demand-backup/"><b>Backup &amp;
+      Restore</b></a> (re:Invent ’17), and
+      <a href="https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-continuous-backups-and-point-in-time-recovery-pitr/"><b>Point-in-Time
+      Recovery</b></a> (2018) — together, the “undo button” for cloud data.</li>
+</ul>
+
+<h2>Patents</h2>
+<ul class="tight">
+  <li><a href="https://patents.google.com/patent/US11036762"><b>US 11,036,762</b></a> — Compound
+      partition and clustering keys (2021): the data model underlying Amazon Keyspaces. Cited as
+      prior art in subsequent prosecutions by Harvard, Oracle, and IBM.</li>
+  <li><a href="https://patents.google.com/patent/US11138164"><b>US 11,138,164</b></a> — Alter table
+      implementation details with schema versioning (2021): zero-downtime online schema evolution.
+      Cited as prior art in prosecutions by Snowflake, Oracle, Dell, and FIS.</li>
+</ul>
+
+<h2>Community leadership &amp; professional service</h2>
+<ul class="tight">
+  <li>Maintainer and code owner, <a href="https://github.com/llm-d-incubation/llm-d-rl-time-slicing">llm-d-rl-time-slicing</a>;
+      reviewer and approver across llm-d projects.</li>
+  <li>A leading technical voice in llm-d’s <a href="https://llm-d.ai/community/sigs">SIG-RL</a>
+      (reinforcement-learning workloads special interest group), helping shape its agenda and
+      direction.</li>
+  <li>Graduate Teaching Assistant, UCLA Computer Science (2015–2016).</li>
+</ul>
+
+<h2>Education</h2>
+<ul class="tight">
+  <li><b>M.S., Computer Science</b> — University of California, Los Angeles (UCLA), 2015–2016.</li>
+  <li><b>B.E., Computer Science</b> — Visvesvaraya Technological University, India, 2011–2015.</li>
+</ul>
+
+</div>
+</body>
+</html>
