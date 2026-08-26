@@ -7,56 +7,154 @@
 <title>Aishwarya (Aishu) Kamal</title>
 <style>
   :root {
-    --ink: #16181d; --muted: #5c6470; --faint: #9aa1ab;
-    --accent: #1a56db; --rule: #e4e7eb; --paper: #ffffff; --desk: #f3f4f6;
+    --ink: #1c1a17; --muted: #6f6a63; --faint: #a39d94;
+    --accent: #0d7d6c; --rule: #e9e5de; --paper: #faf9f6; --desk: #faf9f6;
+    --chip: #f3f0ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece9e4; --muted: #a8a299; --faint: #6e6961;
+      --accent: #3fbfa8; --rule: #2a2723; --paper: #131211; --desk: #131211;
+      --chip: #1c1a17;
+    }
   }
   * { box-sizing: border-box; margin: 0; }
   body {
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, sans-serif;
-    color: var(--ink); background: var(--desk);
-    min-height: 100vh; display: grid; place-items: center; padding: 24px;
+    color: var(--ink); background: var(--paper);
   }
-  .card {
-    max-width: 560px; background: var(--paper); border-radius: 6px;
-    padding: 48px 52px; box-shadow: 0 1px 3px rgba(16,24,40,.07), 0 12px 40px rgba(16,24,40,.09);
-  }
-  h1 { font-size: 28px; font-weight: 650; letter-spacing: -0.4px; margin-bottom: 6px; }
-  .tagline { color: var(--muted); margin-bottom: 20px; }
-  p.about { color: var(--ink); margin-bottom: 26px; font-size: 15px; }
-  .links { display: flex; flex-wrap: wrap; gap: 10px; }
-  .links a {
-    display: inline-block; padding: 8px 14px; border: 1px solid var(--rule);
-    border-radius: 6px; color: var(--accent); text-decoration: none;
-    font-size: 14px; font-weight: 500;
-  }
+  .page { max-width: 760px; margin: 0 auto; padding: 72px 32px 56px; }
+  @media (max-width: 640px) { .page { padding: 40px 20px 40px; } }
+  h1 { font-size: 30px; font-weight: 650; letter-spacing: -0.4px; margin-bottom: 6px; }
+  .tagline { color: var(--muted); margin-bottom: 18px; }
+  .links { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 30px; }
+  .links a { display: inline-block; padding: 7px 13px; border: 1px solid var(--rule);
+    border-radius: 6px; color: var(--accent); text-decoration: none; font-size: 13.5px; font-weight: 500; }
   .links a:hover { border-color: var(--accent); }
   .links a.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .foot { margin-top: 26px; color: var(--faint); font-size: 12.5px; }
+  p.about { margin-bottom: 34px; font-size: 15px; }
+  p.about a, .hl a, .svc a, .writing a { color: var(--accent); text-decoration: none; }
+  p.about a:hover, .hl a:hover, .svc a:hover, .writing a:hover { text-decoration: underline; }
+  .label { font-size: 11.5px; font-weight: 650; letter-spacing: 1.4px; text-transform: uppercase;
+           color: var(--faint); margin-bottom: 14px; }
+  .hl { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 34px; }
+  @media (max-width: 560px) { .hl { grid-template-columns: 1fr; } }
+  .hl .item { border: 1px solid var(--rule); border-radius: 8px; padding: 15px 18px 16px;
+              background: var(--chip); }
+  .hl .yr { color: var(--faint); font-size: 12px; font-variant-numeric: tabular-nums;
+            letter-spacing: 0.6px; margin-bottom: 6px; }
+  .hl .item h3 { font-size: 14.5px; font-weight: 640; margin-bottom: 5px; }
+  .hl .item p { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+  .svc { margin-bottom: 34px; }
+  .svc ul { list-style: none; }
+  .svc li { font-size: 14px; padding: 7px 0; border-bottom: 1px solid var(--rule); }
+  .svc li:last-child { border-bottom: none; }
+  .svc .y { color: var(--faint); font-size: 12.5px; margin-left: 6px; }
+  .writing p { font-size: 14px; padding: 5px 0; }
+  .foot { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--rule);
+          color: var(--faint); font-size: 12.5px; }
 </style>
 </head>
 <body>
-<div class="card">
+<div class="page">
   <h1>Aishwarya (Aishu) Kamal</h1>
-  <div class="tagline">Staff Software Engineer, Google · Seattle, WA</div>
-  <p class="about">
-    I build planet-scale infrastructure: a decade of distributed databases, deep in
-    consensus, replication, and failover, now applied to AI systems, where serving and
-    training run into the same distributed-systems problems. I currently lead RL
-    infrastructure for Google Kubernetes Engine and the RL time-slicing platform in
-    <a href="https://github.com/llm-d/llm-d" style="color:var(--accent);text-decoration:none;">llm-d</a>.
-    Previously, at Amazon DynamoDB I brought ACID transactions to serverless NoSQL, built
-    the &ldquo;undo button&rdquo; for cloud data with continuous backups and point-in-time
-    recovery, and drove the service to five-nines availability; at Google Cloud Memorystore
-    I launched Redis Cluster, Valkey, and cross-region replication.
-  </p>
+  <div class="tagline">Staff Software Engineer, Google &middot; Seattle, WA</div>
+
   <div class="links">
-    <a class="primary" href="cv.html">CV</a>
     <a href="https://github.com/aishukamal">GitHub</a>
     <a href="https://www.linkedin.com/in/aishwaryakamal">LinkedIn</a>
+    <a href="cv.html">CV</a>
+    <a href="https://orcid.org/0009-0005-5019-1268">ORCID</a>
+    <a href="https://www.webofscience.com/wos/author/record/QWD-9828-2026">Web of Science</a>
     <a href="mailto:kamalaishwarya93@gmail.com">Email</a>
   </div>
-  <div class="foot">Named inventor, U.S. Patents 11,036,762 &amp; 11,138,164.</div>
+
+  <p class="about">
+    I build planet-scale distributed systems infrastructure: a decade of distributed
+    databases at Amazon and Google, deep in consensus, replication, and failover, now applied to AI/ML systems
+    and reinforcement learning (RL), where serving and training run into the same
+    distributed-systems problems. I currently lead RL infrastructure for Google Kubernetes
+    Engine and the RL time-slicing platform in
+    <a href="https://github.com/llm-d/llm-d">llm-d</a>.
+  </p>
+
+  <div class="label">Highlights</div>
+  <div class="hl">
+    <div class="item">
+      <div class="yr">2025 &ndash; now</div>
+      <div>
+        <h3>llm-d &middot; co-operative time-slicing for RL</h3>
+        <p>Conceived and lead the <a href="https://github.com/llm-d-incubation/llm-d-rl-time-slicing">open-source platform</a> that lets RL training and serving share
+        accelerators, in the Kubernetes-native stack for distributed LLM inference.
+        <a href="https://cloud.google.com/blog/products/containers-kubernetes/introducing-co-operative-time-slicing-for-rl-in-llm-d">Google Cloud launch post</a></p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="yr">2021 &ndash; 2025</div>
+      <div>
+        <h3>Google Cloud Memorystore &middot; Redis Cluster &amp; Valkey</h3>
+        <p>Owned the data plane across both engine stacks: <a href="https://cloud.google.com/blog/products/databases/memorystore-for-redis-cluster-is-ga">Memorystore for Redis Cluster</a> (2023) and the
+        <a href="https://cloud.google.com/blog/products/databases/announcing-general-availability-of-memorystore-for-valkey/">first managed Valkey service from a major cloud</a> (2024);
+        architected <a href="https://cloud.google.com/blog/products/databases/memorystore-cross-region-replication-and-single-shard-clusters/">cross-region replication</a> on both.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="yr">2019 &ndash; 2021</div>
+      <div>
+        <h3>Amazon Keyspaces &middot; patented data model</h3>
+        <p>Architected the data model behind <a href="https://aws.amazon.com/blogs/aws/new-amazon-keyspaces-for-apache-cassandra-is-now-generally-available/">Amazon Keyspaces</a>.
+        Named inventor on U.S. Patents <a href="https://patents.google.com/patent/US11036762">11,036,762</a> &amp;
+        <a href="https://patents.google.com/patent/US11138164">11,138,164</a>, cited as prior art by
+        Oracle, IBM, Snowflake, Dell, and Harvard.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="yr">2019 &ndash; 2021</div>
+      <div>
+        <h3>Amazon DynamoDB &middot; replication core &amp; five-nines</h3>
+        <p>Worked on the replication and availability core behind DynamoDB&rsquo;s
+        <a href="https://aws.amazon.com/dynamodb/sla/">99.999% availability</a> for global tables;
+        led the Multi-Paxos leader-election change that eliminated spurious elections, described in the
+        <a href="https://www.usenix.org/system/files/atc22-elhemali.pdf">USENIX ATC &rsquo;22 paper</a>.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="yr">2018</div>
+      <div>
+        <h3>Amazon DynamoDB &middot; Transactions</h3>
+        <p>Brought <a href="https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-transactions/">ACID transactions to serverless NoSQL</a>.
+        Owned the storage-node side of the protocol; mechanisms I designed, including the two-phase
+        writeless read protocol, are described in the <a href="https://www.usenix.org/conference/atc23/presentation/idziorek">USENIX ATC &rsquo;23 paper</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="label">Patents</div>
+  <div class="writing" style="margin-bottom:34px">
+    <p><a href="https://patents.google.com/patent/US11036762">U.S. Patent 11,036,762</a> &middot; Compound partition and clustering keys &mdash; the data model behind Amazon Keyspaces</p>
+    <p><a href="https://patents.google.com/patent/US11138164">U.S. Patent 11,138,164</a> &middot; Alter-table with schema versioning &mdash; zero-downtime schema evolution in a serverless database</p>
+    <p style="color:var(--muted);font-size:13px">Cited as prior art in later patents assigned to Oracle, IBM, Snowflake, Dell, FIS, JD.com, and Harvard.</p>
+  </div>
+
+  <div class="label">Professional service</div>
+  <div class="svc">
+    <ul>
+      <li>Program Committee, <a href="https://agentic-fmos.github.io/">AgenticOS Workshop at NeurIPS 2026</a></li>
+      <li>Manuscript reviewer, <a href="https://www.computer.org/csdl/magazine/so">IEEE Software</a> (IEEE Computer Society) <span class="y">Edge-to-Cloud Continuum theme issue</span></li>
+      <li>Artifact Evaluation Program Committee, <a href="https://sigops.org/s/conferences/atc/2026/">USENIX ATC &rsquo;26</a></li>
+      <li>Artifact Evaluation Committee, <a href="https://2027.eurosys.org/">EuroSys &rsquo;27</a></li>
+      <li>Reviewer, <a href="https://sites.google.com/wimlworkshop.org/wimlworkshopneurips2026/">WiML Workshop at NeurIPS 2026</a></li>
+    </ul>
+  </div>
+
+  <div class="label">Selected writing</div>
+  <div class="writing">
+    <p><a href="https://cloud.google.com/blog/products/containers-kubernetes/introducing-co-operative-time-slicing-for-rl-in-llm-d">Introducing co-operative time-slicing for RL in llm-d</a> &middot; Google Cloud Blog</p>
+    <p><a href="https://llm-d.ai/blog/rl-post-training-co-operative-time-slicing">RL post-training with co-operative time-slicing</a> &middot; llm-d.ai</p>
+    <p><a href="https://llm-d.ai/docs/well-lit-paths/foundations/workload-autoscaling">Official llm-d well-lit path for workload autoscaling</a> &middot; llm-d.ai</p>
+  </div>
+
 </div>
 </body>
 </html>
