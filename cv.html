@@ -79,7 +79,7 @@
 <h2>Summary</h2>
 Distributed-systems leader with a decade at Amazon and Google building planet-scale database and
 AI infrastructure, specializing in <b>distributed consensus, replication, and failover</b> — from
-Paxos modifications that took DynamoDB to five nines, to the quorum architectures behind
+Paxos modifications that took DynamoDB from three nines to four, to the quorum architectures behind
 Memorystore’s cross-region replication and single-shard offerings, to resilient accelerator
 multiplexing for RL. I lead the reinforcement-learning infrastructure optimization space for
 Google Kubernetes Engine and drive RL-infrastructure direction in the open ecosystem (llm-d,
@@ -104,7 +104,8 @@ Harvard patent prosecutions.
       <a href="https://cloud.google.com/blog/products/containers-kubernetes/introducing-co-operative-time-slicing-for-rl-in-llm-d">Google
       Cloud announcement</a> and the
       <a href="https://github.com/llm-d-incubation/llm-d-rl-time-slicing">platform on GitHub</a>,
-      which I lead and maintain.</li>
+      which I lead and maintain. Presented by Ion Stoica (co-creator of Spark and Ray) as a case
+      study at <a href="https://youtu.be/21JiuNY9_RY"><b>PyTorch Conference 2026</b></a>.</li>
   <li>Architected llm-d’s <a href="https://llm-d.ai/docs/well-lit-paths/foundations/workload-autoscaling"><b>workload
       autoscaling</b></a> architecture including scale-from-zero and scale-to-zero capabilities, and the
       project’s official autoscaling guide, co-maintained with engineers from IBM.</li>
@@ -145,9 +146,9 @@ Harvard patent prosecutions.
   <li>Led the design and launch of
       <a href="https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-transactions/"><b>Transactions</b></a>
       (re:Invent ’18 — brought ACID to serverless NoSQL for one of the largest database services
-      on earth at 126M peak requests/sec; a shift competitors followed and the subject of the
-      <a href="https://www.usenix.org/conference/atc23/presentation/idziorek">USENIX ATC ’23 Best
-      Paper</a>), and of the
+      on earth at 192M peak requests/sec (Prime Day 2026); a shift competitors followed and the subject of the
+      <a href="https://www.usenix.org/conference/atc23/presentation/idziorek">USENIX ATC ’23
+      paper</a>), and of the
       <a href="https://aws.amazon.com/blogs/aws/new-dynamodb-table-class-save-up-to-60-in-your-dynamodb-costs/"><b>Standard-IA
       table class</b></a> (announced re:Invent ’21 — cut storage costs up to 60%).</li>
   <li>Architected and patented the data model behind
@@ -157,7 +158,7 @@ Harvard patent prosecutions.
       primary store for Monzo Bank’s core banking ledger (350 TB, 2,000+ tables) and adopted by
       Intuit, Adobe, and GE Vernova.</li>
   <li>Led the availability program that improved DynamoDB availability by an order of
-      magnitude, from 99.99% to 99.999% — a 10× reduction in permitted downtime — through deep
+      magnitude, from 99.9% to 99.99% — a 10× reduction in downtime — through deep
       modifications to the Paxos consensus layer.</li>
   <li>Earlier, during DynamoDB’s hyper-growth years, shipped its re:Invent-headline
       data-protection wave as a core engineer:
@@ -167,6 +168,10 @@ Harvard patent prosecutions.
       Restore</b></a> (re:Invent ’17), and
       <a href="https://aws.amazon.com/blogs/aws/new-amazon-dynamodb-continuous-backups-and-point-in-time-recovery-pitr/"><b>Point-in-Time
       Recovery</b></a> (2018) — together, the “undo button” for cloud data.</li>
+  <li>Mechanisms described in the USENIX
+      <a href="https://www.usenix.org/conference/atc22/presentation/elhemali">ATC ’22</a> and
+      <a href="https://www.usenix.org/conference/atc23/presentation/idziorek">ATC ’23</a> DynamoDB
+      papers; taught in graduate courses at MIT, USC, Purdue, Washington, and San Jose State.</li>
 </ul>
 
 <h2>Patents &amp; selected writing</h2>
@@ -190,6 +195,7 @@ Harvard patent prosecutions.
 
 <h2>Community leadership &amp; professional service</h2>
 <ul class="tight">
+  <li>Program Committee member, <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/"><b>KubeCon + CloudNativeCon Europe 2027</b></a>.</li>
   <li>Program Committee member, <a href="https://agentic-fmos.github.io/"><b>AgenticOS Workshop @ NeurIPS 2026</b></a>.</li>
   <li>Reviewer, <a href="https://sites.google.com/wimlworkshop.org/wimlworkshopneurips2026/"><b>WiML Workshop @ NeurIPS 2026</b></a> (Women in Machine Learning).</li>
   <li>Artifact Evaluation Committee, <a href="https://sigops.org/s/conferences/atc/2026/"><b>ACM ATC 2026</b></a>.</li>
